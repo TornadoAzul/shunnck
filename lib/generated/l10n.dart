@@ -50,10 +50,10 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `Search here.`
+  /// `Search here`
   String get buscar {
     return Intl.message(
-      'Search here.',
+      'Search here',
       name: 'buscar',
       desc: '',
       args: [],
@@ -405,6 +405,26 @@ class S {
     return Intl.message(
       'Your connection to the Shunnck network has been established. This way you stay anonymous on the web and help others stay anonymous.',
       name: 'modocorazon',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `San Juan is not in sight!`
+  String get sanjuannoalavista {
+    return Intl.message(
+      'San Juan is not in sight!',
+      name: 'sanjuannoalavista',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `There are internet connection problems that prevent you from connecting to the Shunnck network.`
+  String get sinconexion {
+    return Intl.message(
+      'There are internet connection problems that prevent you from connecting to the Shunnck network.',
+      name: 'sinconexion',
       desc: '',
       args: [],
     );

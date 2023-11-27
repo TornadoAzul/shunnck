@@ -1,5 +1,5 @@
 {
-    "buscar": "¡Busca aquí!",
+    "buscar": "Busca aquí",
     "buscareninternet": "¡Bienvenido a Internet!",
     "politicas": "Al usar Shunnck, aceptas nuestras políticas.",
     "aceptar": "Leer políticas",
@@ -34,5 +34,7 @@
     "modofantasmaon": "Modo fantasma activado.",
     "modofantasmaoff": "Modo fantasma desactivado.",
     "holowide" : "shunnck",
-    "modocorazon" : "Tu conexión a la red Shunnck ha sido establecida. De esta manera, permaneces anónimo en la web y ayudas a otros a mantenerse anónimos."
+    "modocorazon" : "Tu conexión a la red Shunnck ha sido establecida. De esta manera, permaneces anónimo en la web y ayudas a otros a mantenerse anónimos.",
+    "sanjuannoalavista" : "¡San Juan no está a la vista!",
+    "sinconexion" : "Hay problemas de conexión a internet que impiden conectarse con la red de Shunnck."
 }

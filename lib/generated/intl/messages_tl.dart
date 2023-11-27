@@ -68,8 +68,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "politicas": MessageLookupByLibrary.simpleMessage(
             "Sa paggamit ng Shunnck, tinatanggap mo ang aming mga patakaran."),
         "recargar": MessageLookupByLibrary.simpleMessage("I-reload"),
+        "sanjuannoalavista": MessageLookupByLibrary.simpleMessage(
+            "Wala sa paningin si San Juan!"),
         "siguiente": MessageLookupByLibrary.simpleMessage("Susunod"),
         "siguientepagina": MessageLookupByLibrary.simpleMessage("Susunod"),
+        "sinconexion": MessageLookupByLibrary.simpleMessage(
+            "May mga problema sa koneksyon sa internet na pumipigil sa iyong kumonekta sa Shunnck network."),
         "todolisto": MessageLookupByLibrary.simpleMessage("Lahat ay handa na!"),
         "todosguardas": MessageLookupByLibrary.simpleMessage(
             "Dito mo matatagpuan ang lahat ng mga guardas na iyong ini-save sa Holowide na ito."),

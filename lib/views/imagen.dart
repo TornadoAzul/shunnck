@@ -1,11 +1,10 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:intl/intl.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:shunnck/screens/firma.dart';
-import 'package:shunnck/screens/home.dart';
-
-import '../generated/l10n.dart';
+import 'package:shunnck/screens/genesis.dart';
 
 class ImagenScreen extends StatefulWidget {
   const ImagenScreen({Key? key}) : super(key: key);
@@ -62,7 +61,7 @@ class _ImagenScreenState extends State<ImagenScreen> {
     return WillPopScope(
       onWillPop: () async {
         Navigator.of(context).pushReplacement(MaterialPageRoute(
-          builder: (context) => const HomeScreen(),
+          builder: (context) => const GenesisView(),
         ));
         return true;
       },
@@ -99,18 +98,14 @@ class _ImagenScreenState extends State<ImagenScreen> {
                         Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const HomeScreen()),
+                              builder: (context) => const GenesisView()),
                         );
                       },
-                      child: Text(
-                        S.current.holowide,
-                        textAlign: TextAlign.left,
-                        style: const TextStyle(
-                            color: Color(0xFFF8F8F8),
-                            fontSize: 25,
-                            fontFamily: "PON",
-                            fontWeight: FontWeight.bold,
-                            letterSpacing: 1.2),
+                      child: SvgPicture.asset(
+                        Theme.of(context).brightness == Brightness.dark
+                            ? "assets/images/shunnck-cla.svg"
+                            : "assets/images/shunnck-cla.svg",
+                        height: 18,
                       ),
                     ),
                   ),

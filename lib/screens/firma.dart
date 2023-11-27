@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ionicons/ionicons.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:shunnck/screens/genesis.dart';
 import 'package:shunnck/screens/home.dart';
-import '../generated/l10n.dart';
 
 class FirmaView extends StatefulWidget {
   const FirmaView({super.key});
@@ -15,47 +15,24 @@ class _FirmaViewState extends State<FirmaView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+        backgroundColor: Colors.transparent,
         elevation: 0,
-        leading: GestureDetector(
-          onTap: () {
-            Navigator.pushAndRemoveUntil(
-              context,
-              MaterialPageRoute(builder: (context) => HomeScreen()),
-              (route) => false,
-            );
-          },
-          child: Icon(
-            Ionicons.chevron_back_outline,
-            color: Theme.of(context).colorScheme.onBackground,
-          ),
-        ),
-        iconTheme: IconThemeData(
-          color: Theme.of(context).colorScheme.onBackground,
-        ),
         title: Center(
-          child: Text(
-            S.current.holowide,
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: Theme.of(context).brightness == Brightness.dark
-                  ? Theme.of(context).colorScheme.onBackground
-                  : Theme.of(context).primaryColor,
-              fontSize: 24,
-              fontFamily: "LexendExa",
-              fontWeight: FontWeight.bold,
+          child: GestureDetector(
+            onTap: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => const GenesisView()),
+              );
+            },
+            child: SvgPicture.asset(
+              Theme.of(context).brightness == Brightness.dark
+                  ? "assets/images/shunnck-cla.svg"
+                  : "assets/images/shunnck-osc.svg",
+              height: 18,
             ),
           ),
         ),
-        actions: [
-          IconButton(
-            icon: Icon(
-              Ionicons.scan,
-              color: Theme.of(context).colorScheme.secondary,
-            ),
-            onPressed: () {},
-          ),
-        ],
       ),
       body: Padding(
         padding: const EdgeInsets.only(left: 20, right: 20),

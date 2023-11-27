@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:http/http.dart' as http;
 import 'package:ionicons/ionicons.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
+import 'package:shunnck/generated/l10n.dart';
 import 'dart:convert';
+
+import 'package:shunnck/screens/nybox.dart';
 
 class LernasView extends StatefulWidget {
   @override
@@ -27,8 +31,8 @@ class _LernasViewState extends State<LernasView> {
 
   Future<void> _fetchWikipediaResults() async {
     final apiUrl = Uri.parse(_isSpanish
-        ? "https://es.wikipedia.org/w/api.php?format=json&action=query&generator=random&grnnamespace=0&prop=revisions|images&rvprop=content&grnlimit=10"
-        : "https://en.wikipedia.org/w/api.php?format=json&action=query&generator=random&grnnamespace=0&prop=revisions|images&rvprop=content&grnlimit=10");
+        ? "https://es.wikipedia.org/w/api.php?format=json&action=query&generator=random&grnnamespace=0&prop=revisions|images&rvprop=content&grnlimit=5"
+        : "https://en.wikipedia.org/w/api.php?format=json&action=query&generator=random&grnnamespace=0&prop=revisions|images&rvprop=content&grnlimit=5");
 
     try {
       final response = await http.get(apiUrl);
@@ -98,7 +102,6 @@ class _LernasViewState extends State<LernasView> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(children: [
-        CustomAnimatedGradient(),
         _isLoading
             ? Center(
                 child: LoadingAnimationWidget.threeArchedCircle(
@@ -115,23 +118,31 @@ class _LernasViewState extends State<LernasView> {
 
   Widget _buildPageContent() {
     if (_searchResults.isEmpty) {
-      return const Padding(
+      return Padding(
         padding: EdgeInsets.only(left: 19.0, right: 19.0),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(
+              const Icon(
                 Ionicons.alert_circle,
                 size: 45,
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Text(
-                'Holowide no pudo establecer conexión con San Juan.',
+                S.current.sanjuannoalavista,
                 textAlign: TextAlign.center,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
+                ),
+              ),
+              const SizedBox(height: 10),
+              Text(
+                S.current.sinconexion,
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                  fontSize: 18,
                 ),
               ),
             ],
@@ -148,34 +159,62 @@ class _LernasViewState extends State<LernasView> {
         final title = _searchResults[index]['title'] ?? 'Título no disponible';
         final description =
             _searchResults[index]['description'] ?? 'Descripción no disponible';
-        final pageId = _searchResults[index]['pageId'];
 
-        return Container(
-          child: Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Text(
-                  title,
-                  maxLines: 7,
-                  style: TextStyle(
-                    fontSize: 50,
-                    fontWeight: FontWeight.bold,
+        return GestureDetector(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => NyboxView(initialText: title),
+              ),
+            );
+          },
+          child: Container(
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  SvgPicture.asset(
+                    Theme.of(context).brightness == Brightness.dark
+                        ? "assets/images/shunnck-cla.svg"
+                        : "assets/images/shunnck-osc.svg",
+                    height: 18,
                   ),
-                ),
-                SizedBox(height: 15),
-                Text(
-                  description,
-                  maxLines: 3,
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                    fontSize: 20,
+                  const SizedBox(height: 17),
+                  Text(
+                    title,
+                    maxLines: 7,
+                    style: const TextStyle(
+                      fontSize: 50,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
-                ),
-                SizedBox(height: 40),
-              ],
+                  const SizedBox(height: 15),
+                  Text(
+                    description,
+                    maxLines: 3,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(
+                      fontSize: 20,
+                    ),
+                  ),
+                  const SizedBox(height: 20),
+                  const Align(
+                    alignment: Alignment.centerRight,
+                    child: Text(
+                      "Wikipedia",
+                      maxLines: 1,
+                      style: TextStyle(
+                        fontFamily: "SJ",
+                        fontSize: 16,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 40),
+                ],
+              ),
             ),
           ),
         );

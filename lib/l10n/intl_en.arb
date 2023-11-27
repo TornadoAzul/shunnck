@@ -1,5 +1,5 @@
 {
-    "buscar": "Search here.",
+    "buscar": "Search here",
     "buscareninternet": "Welcome to the Internet!",
     "politicas": "By using Shunnck, you accept our policies.",
     "aceptar": "Read policies",
@@ -34,5 +34,7 @@
     "modofantasmaon": "Phantom mode activated.",
     "modofantasmaoff": "Phantom mode deactivated.",
     "holowide" : "shunnck",
-    "modocorazon" : "Your connection to the Shunnck network has been established. This way you stay anonymous on the web and help others stay anonymous."
+    "modocorazon" : "Your connection to the Shunnck network has been established. This way you stay anonymous on the web and help others stay anonymous.",
+    "sanjuannoalavista": "San Juan is not in sight!",
+    "sinconexion": "There are internet connection problems that prevent you from connecting to the Shunnck network."
 }

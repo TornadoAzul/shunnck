@@ -7,6 +7,7 @@ import 'package:ionicons/ionicons.dart';
 import 'package:share/share.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:shunnck/data/chi.dart';
+import 'package:shunnck/screens/genesis.dart';
 import 'package:shunnck/screens/lernas.dart';
 import 'package:shunnck/screens/nfc.dart';
 import 'package:shunnck/screens/nybox.dart';
@@ -77,8 +78,12 @@ class _HomeScreenState extends State<HomeScreen>
     });
   }
 
-  Future<void> _saveWebLinks() async {
+  void _saveWebLinks() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
+    // Add the current URL to the list of web links if it's not already present
+    if (!_webLinks.contains(_currentUrl)) {
+      _webLinks.add(_currentUrl);
+    }
     await prefs.setStringList('web_links', _webLinks);
   }
 
@@ -576,7 +581,7 @@ class _HomeScreenState extends State<HomeScreen>
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) => const HomeScreen(),
+          builder: (context) => const GenesisView(),
         ),
       );
       return false;
@@ -603,12 +608,13 @@ class _HomeScreenState extends State<HomeScreen>
           initialUrlRequest: URLRequest(url: Uri.parse(_currentUrl)),
           initialOptions: InAppWebViewGroupOptions(
             crossPlatform: InAppWebViewOptions(
-              preferredContentMode: UserPreferredContentMode.MOBILE,
-              javaScriptEnabled: true,
-              cacheEnabled: false,
-              clearCache: false,
-            ),
+                preferredContentMode: UserPreferredContentMode.MOBILE,
+                javaScriptEnabled: true,
+                cacheEnabled: false,
+                clearCache: false,
+                useOnDownloadStart: true),
           ),
+          onDownloadStartRequest: (controller, url) async {},
           onWebViewCreated: (controller) async {
             _webViewController = controller;
             _webViewController.addJavaScriptHandler(
@@ -760,18 +766,23 @@ class _HomeScreenState extends State<HomeScreen>
                       _showBottomSheet(context);
                     },
                   ),
-                  IconButton(
-                    icon: Icon(
-                      Ionicons.search_outline,
-                      color: Theme.of(context).colorScheme.secondary,
-                    ),
-                    onPressed: () {
-                      Navigator.push(
+                  GestureDetector(
+                    onLongPress: () {
+                      Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const NyboxView()),
+                            builder: (context) => const GenesisView()),
                       );
                     },
+                    child: IconButton(
+                      icon: Icon(
+                        Ionicons.search_outline,
+                        color: Theme.of(context).colorScheme.secondary,
+                      ),
+                      onPressed: () {
+                        _openSearchBar();
+                      },
+                    ),
                   ),
                   GestureDetector(
                     onLongPress: () {

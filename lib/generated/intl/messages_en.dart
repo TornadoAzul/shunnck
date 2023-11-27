@@ -28,7 +28,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "agregarnombre":
             MessageLookupByLibrary.simpleMessage("Add a title to the tab"),
         "atras": MessageLookupByLibrary.simpleMessage("Back"),
-        "buscar": MessageLookupByLibrary.simpleMessage("Search here."),
+        "buscar": MessageLookupByLibrary.simpleMessage("Search here"),
         "buscareninternet":
             MessageLookupByLibrary.simpleMessage("Welcome to the Internet!"),
         "cancelar": MessageLookupByLibrary.simpleMessage("No"),
@@ -65,8 +65,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "politicas": MessageLookupByLibrary.simpleMessage(
             "By using Shunnck, you accept our policies."),
         "recargar": MessageLookupByLibrary.simpleMessage("Reload"),
+        "sanjuannoalavista":
+            MessageLookupByLibrary.simpleMessage("San Juan is not in sight!"),
         "siguiente": MessageLookupByLibrary.simpleMessage("Next"),
         "siguientepagina": MessageLookupByLibrary.simpleMessage("Next"),
+        "sinconexion": MessageLookupByLibrary.simpleMessage(
+            "There are internet connection problems that prevent you from connecting to the Shunnck network."),
         "todolisto":
             MessageLookupByLibrary.simpleMessage("Everything is ready!"),
         "todosguardas": MessageLookupByLibrary.simpleMessage(

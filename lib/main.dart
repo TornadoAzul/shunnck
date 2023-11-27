@@ -3,10 +3,11 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:shunnck/screens/home.dart';
+import 'package:shunnck/screens/genesis.dart';
 import 'generated/l10n.dart';
 
-void main() {
+Future main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
@@ -27,7 +28,7 @@ class _MyAppState extends State<MyApp> {
   Future<void> _initApp() async {}
 
   String _getTitle(BuildContext context) {
-    return 'Mi aplicación';
+    return 'Shunnck';
   }
 
   @override
@@ -45,19 +46,19 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       initialRoute: 'inicio',
       routes: {
-        'inicio': (context) => const HomeScreen(),
+        'inicio': (context) => const GenesisView(),
       },
       theme: ThemeData(
         brightness: Brightness.light,
         scaffoldBackgroundColor: const Color(0xFFF8F8F8),
         primaryColor: const Color(0xFFFF2D55),
         colorScheme: const ColorScheme.light(
-          background: Color(0xFFE1E1E1),
-          onBackground: Color(0xFF171717),
-          secondary: Color(0xFF424242),
-          onSecondary: Color(0xFF171717),
-          tertiary: Color(0xFFFFFFFF),
-        ),
+            background: Color.fromRGBO(225, 225, 225, 1),
+            onBackground: Color(0xFF171717),
+            secondary: Color(0xFF424242),
+            onSecondary: Color(0xFF171717),
+            tertiary: Color(0xFFFFFFFF),
+            onTertiary: Color(0xff999999)),
         fontFamily: 'PON',
       ),
       darkTheme: ThemeData(
@@ -65,12 +66,12 @@ class _MyAppState extends State<MyApp> {
         scaffoldBackgroundColor: const Color(0xFF1E1E1E),
         primaryColor: const Color(0xFFFF2D55),
         colorScheme: const ColorScheme.dark(
-          background: Color(0xFF171717),
-          onBackground: Color(0xFFF8F8F8),
-          secondary: Color(0xFFCACACA),
-          onSecondary: Color(0xFFF8F8F8),
-          tertiary: Color(0xFF282828),
-        ),
+            background: Color(0xFF171717),
+            onBackground: Color(0xFFF8F8F8),
+            secondary: Color(0xFFCACACA),
+            onSecondary: Color(0xFFF8F8F8),
+            tertiary: Color(0xFF282828),
+            onTertiary: Color(0xFF494949)),
         fontFamily: 'PON',
       ),
       themeMode: ThemeMode.system,

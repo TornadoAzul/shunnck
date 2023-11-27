@@ -1,20 +1,22 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:ionicons/ionicons.dart';
+import 'package:shunnck/screens/genesis.dart';
 import 'package:shunnck/screens/home.dart';
 import '../generated/l10n.dart';
-import 'inicio.dart';
-import 'ion.dart';
 
 class NyboxView extends StatefulWidget {
-  const NyboxView({Key? key}) : super(key: key);
+  final String? initialText;
+
+  const NyboxView({Key? key, this.initialText}) : super(key: key);
 
   @override
   State<NyboxView> createState() => _NyboxViewState();
 }
 
 class _NyboxViewState extends State<NyboxView> {
-  final TextEditingController _textEditingController = TextEditingController();
+  late TextEditingController _textEditingController;
   late FocusNode _textFocusNode;
   double _opacityLevel = 1.0;
   late Timer _opacityTimer;
@@ -23,6 +25,8 @@ class _NyboxViewState extends State<NyboxView> {
   void initState() {
     super.initState();
     _startOpacityTimer();
+    _textEditingController =
+        TextEditingController(text: widget.initialText ?? '');
     _textFocusNode = FocusNode();
     _openKeyboard();
   }
@@ -46,16 +50,7 @@ class _NyboxViewState extends State<NyboxView> {
   void _handleSubmitted(String userInput) {
     final isLink = Uri.tryParse(userInput)?.hasScheme ?? false;
 
-    if (userInput.startsWith("!")) {
-      final homeScreenUrl =
-          'https://duckduckgo.com/?q=${Uri.encodeComponent(userInput)}';
-      Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => HomeScreen(url: homeScreenUrl),
-        ),
-      );
-    } else if (isLink) {
+    if (isLink) {
       Navigator.push(
         context,
         MaterialPageRoute(
@@ -63,10 +58,11 @@ class _NyboxViewState extends State<NyboxView> {
         ),
       );
     } else {
+      final homeScreenUrl = 'https://duckduckgo.com/?q=$userInput';
       Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => IonScreen(searchQuery: userInput),
+          builder: (context) => HomeScreen(url: homeScreenUrl),
         ),
       );
     }
@@ -86,7 +82,7 @@ class _NyboxViewState extends State<NyboxView> {
       onWillPop: () async {
         Navigator.pushAndRemoveUntil(
           context,
-          MaterialPageRoute(builder: (context) => const InicioScreen()),
+          MaterialPageRoute(builder: (context) => const GenesisView()),
           (route) => false,
         );
         return false;
@@ -109,17 +105,11 @@ class _NyboxViewState extends State<NyboxView> {
             color: Theme.of(context).colorScheme.onBackground,
           ),
           title: Center(
-            child: Text(
-              S.current.holowide,
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: Theme.of(context).brightness == Brightness.dark
-                    ? Theme.of(context).colorScheme.onBackground
-                    : Theme.of(context).primaryColor,
-                fontSize: 24,
-                fontFamily: "PON",
-                fontWeight: FontWeight.bold,
-              ),
+            child: SvgPicture.asset(
+              Theme.of(context).brightness == Brightness.dark
+                  ? "assets/images/shunnck-cla.svg"
+                  : "assets/images/shunnck-osc.svg",
+              height: 18,
             ),
           ),
           actions: [

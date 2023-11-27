@@ -28,7 +28,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "agregarnombre": MessageLookupByLibrary.simpleMessage(
             "Agregar un título a la pestaña"),
         "atras": MessageLookupByLibrary.simpleMessage("Atrás"),
-        "buscar": MessageLookupByLibrary.simpleMessage("¡Busca aquí!"),
+        "buscar": MessageLookupByLibrary.simpleMessage("Busca aquí"),
         "buscareninternet":
             MessageLookupByLibrary.simpleMessage("¡Bienvenido a Internet!"),
         "cancelar": MessageLookupByLibrary.simpleMessage("No"),
@@ -67,8 +67,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "politicas": MessageLookupByLibrary.simpleMessage(
             "Al usar Shunnck, aceptas nuestras políticas."),
         "recargar": MessageLookupByLibrary.simpleMessage("Recargar"),
+        "sanjuannoalavista": MessageLookupByLibrary.simpleMessage(
+            "¡San Juan no está a la vista!"),
         "siguiente": MessageLookupByLibrary.simpleMessage("Siguiente"),
         "siguientepagina": MessageLookupByLibrary.simpleMessage("Siguiente"),
+        "sinconexion": MessageLookupByLibrary.simpleMessage(
+            "Hay problemas de conexión a internet que impiden conectarse con la red de Shunnck."),
         "todolisto": MessageLookupByLibrary.simpleMessage("¡Todo está listo!"),
         "todosguardas": MessageLookupByLibrary.simpleMessage(
             "Aquí encontrarás todas las guardas que has guardado en este Holowide."),
