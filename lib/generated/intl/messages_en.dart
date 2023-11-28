@@ -45,10 +45,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "guardado": MessageLookupByLibrary.simpleMessage("Saved"),
         "guardaguardado": MessageLookupByLibrary.simpleMessage(
             "The guarda has been saved in the Holowide!"),
-        "guardar": MessageLookupByLibrary.simpleMessage("Save"),
+        "guardar": MessageLookupByLibrary.simpleMessage("Save site"),
         "holowide": MessageLookupByLibrary.simpleMessage("shunnck"),
         "lotengo": MessageLookupByLibrary.simpleMessage("I got it!"),
-        "mispestanas": MessageLookupByLibrary.simpleMessage("My tabs"),
+        "mispestanas": MessageLookupByLibrary.simpleMessage("My sites"),
         "modocorazon": MessageLookupByLibrary.simpleMessage(
             "Your connection to the Shunnck network has been established. This way you stay anonymous on the web and help others stay anonymous."),
         "modoescritorio": MessageLookupByLibrary.simpleMessage("Desktop mode"),

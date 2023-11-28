@@ -304,7 +304,7 @@ class _HomeScreenState extends State<HomeScreen>
                     child: Align(
                       alignment: Alignment.centerLeft,
                       child: Text(
-                        "Sitios webs guardados",
+                        S.current.mispestanas,
                         style: TextStyle(
                           fontSize: 25,
                           height: 1.2,
@@ -322,9 +322,9 @@ class _HomeScreenState extends State<HomeScreen>
                       Ionicons.add,
                       size: 26,
                     ),
-                    title: const Text(
-                      "Guardar sitio",
-                      style: TextStyle(fontSize: 22),
+                    title: Text(
+                      S.current.guardar,
+                      style: const TextStyle(fontSize: 22),
                     ),
                   ),
                   Expanded(

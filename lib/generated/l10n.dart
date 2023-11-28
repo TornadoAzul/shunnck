@@ -180,10 +180,10 @@ class S {
     );
   }
 
-  /// `Save`
+  /// `Save site`
   String get guardar {
     return Intl.message(
-      'Save',
+      'Save site',
       name: 'guardar',
       desc: '',
       args: [],
@@ -200,10 +200,10 @@ class S {
     );
   }
 
-  /// `My tabs`
+  /// `My sites`
   String get mispestanas {
     return Intl.message(
-      'My tabs',
+      'My sites',
       name: 'mispestanas',
       desc: '',
       args: [],

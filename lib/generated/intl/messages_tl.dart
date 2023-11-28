@@ -48,7 +48,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "guardado": MessageLookupByLibrary.simpleMessage("Naitala"),
         "guardaguardado": MessageLookupByLibrary.simpleMessage(
             "Ang guarda ay na-save sa Holowide!"),
-        "guardar": MessageLookupByLibrary.simpleMessage("I-save"),
+        "guardar": MessageLookupByLibrary.simpleMessage("I-save ang site"),
         "holowide": MessageLookupByLibrary.simpleMessage("shunnck"),
         "lotengo": MessageLookupByLibrary.simpleMessage("Nakuha ko na!"),
         "mispestanas": MessageLookupByLibrary.simpleMessage("Aking mga tab"),

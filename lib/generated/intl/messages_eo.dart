@@ -46,7 +46,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "guardado": MessageLookupByLibrary.simpleMessage("Konservita"),
         "guardaguardado": MessageLookupByLibrary.simpleMessage(
             "La lanĉeto estis konservita en la Holowide!"),
-        "guardar": MessageLookupByLibrary.simpleMessage("Konservi"),
+        "guardar": MessageLookupByLibrary.simpleMessage("Konservi retejon"),
         "holowide": MessageLookupByLibrary.simpleMessage("shunnck"),
         "lotengo": MessageLookupByLibrary.simpleMessage("Mi komprenis!"),
         "mispestanas": MessageLookupByLibrary.simpleMessage("Miaj lanĉetoj"),

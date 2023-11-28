@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/route_manager.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:shunnck/generated/l10n.dart';
@@ -72,7 +71,7 @@ class _GenesisViewState extends State<GenesisView> {
                 fontSize: 21,
               ),
               decoration: InputDecoration(
-                hintText: 'Buscar',
+                hintText: S.current.buscar,
                 hintStyle: TextStyle(
                   color: Theme.of(context).colorScheme.secondary,
                   fontSize: 18,
@@ -232,7 +231,7 @@ class _GenesisViewState extends State<GenesisView> {
                     child: Align(
                       alignment: Alignment.centerLeft,
                       child: Text(
-                        'Sitios webs guardados',
+                        S.current.mispestanas,
                         style: TextStyle(
                           fontSize: 25,
                           height: 1.2,
@@ -248,7 +247,7 @@ class _GenesisViewState extends State<GenesisView> {
                       color: Theme.of(context).colorScheme.secondary,
                     ),
                     title: Text(
-                      'Guardar sitio',
+                      S.current.guardar,
                       style: TextStyle(
                         fontSize: 22,
                         color: Theme.of(context).colorScheme.secondary,

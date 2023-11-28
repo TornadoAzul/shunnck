@@ -46,10 +46,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "guardado": MessageLookupByLibrary.simpleMessage("Guardado"),
         "guardaguardado": MessageLookupByLibrary.simpleMessage(
             "¡La guarda se ha guardado en el Holowide!"),
-        "guardar": MessageLookupByLibrary.simpleMessage("Guardar"),
+        "guardar": MessageLookupByLibrary.simpleMessage("Guardar sitio"),
         "holowide": MessageLookupByLibrary.simpleMessage("shunnck"),
         "lotengo": MessageLookupByLibrary.simpleMessage("¡Lo tengo!"),
-        "mispestanas": MessageLookupByLibrary.simpleMessage("Mis pestañas"),
+        "mispestanas": MessageLookupByLibrary.simpleMessage("Mis sitios"),
         "modocorazon": MessageLookupByLibrary.simpleMessage(
             "Tu conexión a la red Shunnck ha sido establecida. De esta manera, permaneces anónimo en la web y ayudas a otros a mantenerse anónimos."),
         "modoescritorio":
