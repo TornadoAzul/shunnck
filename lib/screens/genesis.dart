@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:shunnck/generated/l10n.dart';
@@ -17,11 +19,20 @@ class GenesisView extends StatefulWidget {
 class _GenesisViewState extends State<GenesisView> {
   late BuildContext _context;
   List<String> _webLinks = [];
+  String _appVersion = '1.0.0';
 
   @override
   void initState() {
     super.initState();
     _loadWebLinks();
+    _getAppVersion();
+  }
+
+  Future<void> _getAppVersion() async {
+    PackageInfo packageInfo = await PackageInfo.fromPlatform();
+    setState(() {
+      _appVersion = packageInfo.version;
+    });
   }
 
   Future<void> _loadWebLinks() async {
@@ -106,8 +117,15 @@ class _GenesisViewState extends State<GenesisView> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
-                Icon(Ionicons.menu_outline,
-                    color: Theme.of(context).colorScheme.onTertiary),
+                IconButton(
+                  icon: Icon(
+                    Ionicons.menu_outline,
+                    color: Theme.of(context).colorScheme.secondary,
+                  ),
+                  onPressed: () {
+                    _mostrarAcciones(context);
+                  },
+                ),
                 GestureDetector(
                   onLongPress: () {
                     Navigator.pushReplacement(
@@ -292,6 +310,82 @@ class _GenesisViewState extends State<GenesisView> {
                           ),
                         );
                       },
+                    ),
+                  ),
+                ],
+              ),
+            );
+          },
+        );
+      },
+    );
+  }
+
+  void _mostrarAcciones(BuildContext context) {
+    showModalBottomSheet<void>(
+      context: context,
+      builder: (BuildContext context) {
+        return StatefulBuilder(
+          builder: (BuildContext context, StateSetter setState) {
+            return Container(
+              color: Theme.of(context).scaffoldBackgroundColor,
+              child: Column(
+                children: [
+                  const SizedBox(height: 30),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      left: 15,
+                      top: 15,
+                      bottom: 10,
+                      right: 15,
+                    ),
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: SvgPicture.asset(
+                        Theme.of(context).brightness == Brightness.dark
+                            ? "assets/images/shunnck-cla.svg"
+                            : "assets/images/shunnck-osc.svg",
+                        height: 23,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      left: 15,
+                      bottom: 10,
+                      right: 15,
+                    ),
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        _appVersion,
+                        style: TextStyle(
+                          fontSize: 18,
+                          height: 1.2,
+                          color: Theme.of(context).colorScheme.onBackground,
+                        ),
+                      ),
+                    ),
+                  ),
+                  ListTile(
+                    onTap: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const HomeScreen(
+                                  url:
+                                      "https://intsplay.com/holowide/politicas/",
+                                )),
+                      );
+                    },
+                    leading: Icon(
+                      Ionicons.document_lock_outline,
+                      color: Theme.of(context).colorScheme.onBackground,
+                      size: 26,
+                    ),
+                    title: Text(
+                      S.current.aceptar,
+                      style: const TextStyle(fontSize: 22),
                     ),
                   ),
                 ],

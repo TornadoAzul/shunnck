@@ -7,7 +7,6 @@ import 'package:shunnck/screens/genesis.dart';
 import 'generated/l10n.dart';
 
 Future main() async {
-  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 

@@ -132,7 +132,7 @@ class _ImagenScreenState extends State<ImagenScreen> {
                               );
                             },
                             child: const Text(
-                              "LAS PIEDRAS",
+                              "CIDRA",
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                   color: Color(0xFFF8F8F8),

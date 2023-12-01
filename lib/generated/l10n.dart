@@ -80,10 +80,10 @@ class S {
     );
   }
 
-  /// `Read policies`
+  /// `Read privacy policies`
   String get aceptar {
     return Intl.message(
-      'Read policies',
+      'Read privacy policies',
       name: 'aceptar',
       desc: '',
       args: [],
