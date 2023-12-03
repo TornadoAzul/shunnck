@@ -48,6 +48,7 @@ class _GenesisViewState extends State<GenesisView> {
 
     return Scaffold(
       appBar: AppBar(
+        forceMaterialTransparency: true,
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         elevation: 0,
         leading: GestureDetector(
@@ -76,10 +77,12 @@ class _GenesisViewState extends State<GenesisView> {
           ),
           child: GestureDetector(
             child: TextField(
+              cursorColor: Theme.of(context).primaryColor,
+              cursorRadius: const Radius.circular(20),
               onSubmitted: _handleSubmitted,
               style: TextStyle(
                 color: Theme.of(context).colorScheme.onBackground,
-                fontSize: 21,
+                fontSize: 18,
               ),
               decoration: InputDecoration(
                 hintText: S.current.buscar,
@@ -148,9 +151,12 @@ class _GenesisViewState extends State<GenesisView> {
                     },
                   ),
                 ),
-                Icon(
-                  Ionicons.arrow_undo_outline,
-                  color: Theme.of(context).colorScheme.onTertiary,
+                IconButton(
+                  icon: Icon(
+                    Ionicons.arrow_undo_outline,
+                    color: Theme.of(context).colorScheme.onTertiary,
+                  ),
+                  onPressed: () {},
                 ),
               ],
             ),
@@ -365,6 +371,34 @@ class _GenesisViewState extends State<GenesisView> {
                           color: Theme.of(context).colorScheme.onBackground,
                         ),
                       ),
+                    ),
+                  ),
+                  ListTile(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    leading: Icon(
+                      Ionicons.shield_outline,
+                      color: Theme.of(context).colorScheme.onBackground,
+                      size: 26,
+                    ),
+                    title: const Text(
+                      "CodRecup",
+                      style: TextStyle(fontSize: 22),
+                    ),
+                  ),
+                  ListTile(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    leading: Icon(
+                      Ionicons.scan_outline,
+                      color: Theme.of(context).colorScheme.onBackground,
+                      size: 26,
+                    ),
+                    title: const Text(
+                      "OjoQR",
+                      style: TextStyle(fontSize: 22),
                     ),
                   ),
                   ListTile(

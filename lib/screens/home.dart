@@ -713,6 +713,8 @@ class _HomeScreenState extends State<HomeScreen>
                 onTap: () {
                   _selectAllText();
                 },
+                cursorRadius: const Radius.circular(20),
+                cursorColor: Theme.of(context).primaryColor,
                 controller: TextEditingController(text: _currentUrl),
                 focusNode: _searchFieldFocus,
                 onChanged: (newUrl) {
@@ -721,7 +723,7 @@ class _HomeScreenState extends State<HomeScreen>
                 onSubmitted: handleSubmitted,
                 style: TextStyle(
                   color: Theme.of(context).colorScheme.onBackground,
-                  fontSize: 21,
+                  fontSize: 18,
                 ),
                 decoration: InputDecoration(
                   hintText: S.current.url,
