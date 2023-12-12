@@ -4,20 +4,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:shunnck/screens/genesis.dart';
+import 'package:shunnck/views/imagen.dart';
 import 'generated/l10n.dart';
 
 Future main() async {
-  runApp(const MyApp());
+  runApp(const Shunnck());
 }
 
-class MyApp extends StatefulWidget {
-  const MyApp({super.key});
+class Shunnck extends StatefulWidget {
+  const Shunnck({super.key});
 
   @override
-  _MyAppState createState() => _MyAppState();
+  _ShunnckState createState() => _ShunnckState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _ShunnckState extends State<Shunnck> {
   @override
   void initState() {
     super.initState();
@@ -46,6 +47,7 @@ class _MyAppState extends State<MyApp> {
       initialRoute: 'inicio',
       routes: {
         'inicio': (context) => const GenesisView(),
+        'origen': (context) => const ImagenScreen()
       },
       theme: ThemeData(
         brightness: Brightness.light,

@@ -378,6 +378,21 @@ class _GenesisViewState extends State<GenesisView> {
                       Navigator.pop(context);
                     },
                     leading: Icon(
+                      Ionicons.cube_outline,
+                      color: Theme.of(context).colorScheme.onBackground,
+                      size: 26,
+                    ),
+                    title: const Text(
+                      "Oranĝo",
+                      style: TextStyle(fontSize: 22),
+                    ),
+                  ),
+                  ListTile(
+                    onTap: () {
+                      Navigator.pop(context);
+                      _codRecup(context);
+                    },
+                    leading: Icon(
                       Ionicons.shield_outline,
                       color: Theme.of(context).colorScheme.onBackground,
                       size: 26,
@@ -420,6 +435,87 @@ class _GenesisViewState extends State<GenesisView> {
                     title: Text(
                       S.current.aceptar,
                       style: const TextStyle(fontSize: 22),
+                    ),
+                  ),
+                ],
+              ),
+            );
+          },
+        );
+      },
+    );
+  }
+
+  void _codRecup(BuildContext context) {
+    showModalBottomSheet<void>(
+      context: context,
+      builder: (BuildContext context) {
+        return StatefulBuilder(
+          builder: (BuildContext context, StateSetter setState) {
+            return Container(
+              color: Theme.of(context).scaffoldBackgroundColor,
+              child: Column(
+                children: [
+                  const SizedBox(height: 30),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      left: 15,
+                      bottom: 10,
+                      right: 15,
+                    ),
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        "CodRecup",
+                        style: TextStyle(
+                          fontSize: 28,
+                          fontWeight: FontWeight.bold,
+                          height: 1.2,
+                          color: Theme.of(context).colorScheme.onBackground,
+                        ),
+                      ),
+                    ),
+                  ),
+                  ListTile(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    leading: Icon(
+                      Ionicons.power_outline,
+                      color: Theme.of(context).colorScheme.onBackground,
+                      size: 26,
+                    ),
+                    title: const Text(
+                      "Iniciar bloqueo",
+                      style: TextStyle(fontSize: 22),
+                    ),
+                  ),
+                  ListTile(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    leading: Icon(
+                      Ionicons.nuclear_outline,
+                      color: Theme.of(context).colorScheme.onBackground,
+                      size: 26,
+                    ),
+                    title: const Text(
+                      "Sitios a bloquear",
+                      style: TextStyle(fontSize: 22),
+                    ),
+                  ),
+                  ListTile(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    leading: Icon(
+                      Ionicons.wifi_outline,
+                      color: Theme.of(context).colorScheme.onBackground,
+                      size: 26,
+                    ),
+                    title: const Text(
+                      "Red Shunnck activada",
+                      style: TextStyle(fontSize: 22),
                     ),
                   ),
                 ],

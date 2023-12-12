@@ -576,7 +576,7 @@ class _HomeScreenState extends State<HomeScreen>
   Future<bool> onWillPop() async {
     if (await _webViewController.canGoBack()) {
       _webViewController.goBack();
-      return true;
+      return false;
     } else {
       Navigator.pushReplacement(
         context,
@@ -610,6 +610,7 @@ class _HomeScreenState extends State<HomeScreen>
             crossPlatform: InAppWebViewOptions(
                 preferredContentMode: UserPreferredContentMode.MOBILE,
                 javaScriptEnabled: true,
+                incognito: true,
                 cacheEnabled: false,
                 clearCache: false,
                 useOnDownloadStart: true),

@@ -15,6 +15,7 @@ class _FirmaViewState extends State<FirmaView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        forceMaterialTransparency: true,
         backgroundColor: Colors.transparent,
         elevation: 0,
         title: Center(
@@ -270,6 +271,32 @@ class _FirmaViewState extends State<FirmaView> {
             ),
             Text(
               "Un cambio de paradigma.",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Theme.of(context).colorScheme.onBackground,
+                fontSize: 22,
+                fontFamily: "PON",
+              ),
+            ),
+            const SizedBox(
+              height: 300,
+            ),
+            const SizedBox(
+              height: 200,
+            ),
+            Text(
+              "LAS PIEDRAS",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  color: Theme.of(context).brightness == Brightness.dark
+                      ? Theme.of(context).colorScheme.onBackground
+                      : Theme.of(context).primaryColor,
+                  fontSize: 140,
+                  fontFamily: "CAG",
+                  fontWeight: FontWeight.bold),
+            ),
+            Text(
+              "Algo nuevo para todos.",
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: Theme.of(context).colorScheme.onBackground,
