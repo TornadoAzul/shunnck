@@ -10,7 +10,7 @@
     "confirmacioneliminar": "Sigurado ka bang gusto mong burahin ang sandaling ito?",
     "confirmar": "Oo",
     "cancelar": "Hindi",
-    "guardado": "Naitala",
+    "guardado": "Naitala.",
     "agregarnombre": "Magdagdag ng pamagat sa tab",
     "guardar": "I-save ang site",
     "cancelarpelao": " kanselahin",
@@ -36,5 +36,12 @@
     "holowide" : "shunnck",
     "modocorazon" : "Ang iyong koneksyon sa Shunnck network ay naitaguyod. Sa ganitong paraan, mananatiling anonymous ka sa web at tutulong sa iba na manatili ring anonymous.",
     "sanjuannoalavista": "Wala sa paningin si San Juan!",
-    "sinconexion": "May mga problema sa koneksyon sa internet na pumipigil sa iyong kumonekta sa Shunnck network."
+    "sinconexion": "May mga problema sa koneksyon sa internet na pumipigil sa iyong kumonekta sa Shunnck network.",
+    "mantenerlupa1": "Pindutin nang matagal ang ",
+    "mantenerlupa2": " para bumalik sa simulaan.",
+    "bloqueoiniciado": "Simula ng block",
+    "bloqueocr": "Ang masibong pag-block ng mga tagapagtaguyod ng CodRecup ay nagkakalap ng mga banta sa lokal at ipinadala ang mga ito sa Shunnck network upang mapigilan ang mga ito nang mas maaga.",
+    "nohaynadaatras": "Wala kang mababalikan.",
+    "nohaynadaquerecargar": "Wala kang pwedeng i-reload.",
+    "nopuedescompartir": "Hindi mo ito maaaring ibahagi."
 }

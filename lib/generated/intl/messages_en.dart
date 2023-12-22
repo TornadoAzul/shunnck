@@ -28,6 +28,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "agregarnombre":
             MessageLookupByLibrary.simpleMessage("Add a title to the tab"),
         "atras": MessageLookupByLibrary.simpleMessage("Back"),
+        "bloqueocr": MessageLookupByLibrary.simpleMessage(
+            "CodRecup\'s mass tracking block collects threats locally and sends them to the Shunnck network to stop them as soon as possible."),
+        "bloqueoiniciado":
+            MessageLookupByLibrary.simpleMessage("Block initiated"),
         "buscar": MessageLookupByLibrary.simpleMessage("Search here"),
         "buscareninternet":
             MessageLookupByLibrary.simpleMessage("Welcome to the Internet!"),
@@ -42,12 +46,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "copiado":
             MessageLookupByLibrary.simpleMessage("Hello, this link is copied."),
         "estasseguro": MessageLookupByLibrary.simpleMessage("Secure!"),
-        "guardado": MessageLookupByLibrary.simpleMessage("Saved"),
+        "guardado": MessageLookupByLibrary.simpleMessage("Saved."),
         "guardaguardado": MessageLookupByLibrary.simpleMessage(
             "The guarda has been saved in the Holowide!"),
         "guardar": MessageLookupByLibrary.simpleMessage("Save site"),
         "holowide": MessageLookupByLibrary.simpleMessage("shunnck"),
         "lotengo": MessageLookupByLibrary.simpleMessage("I got it!"),
+        "mantenerlupa1":
+            MessageLookupByLibrary.simpleMessage("Press and hold "),
+        "mantenerlupa2":
+            MessageLookupByLibrary.simpleMessage(" to return to the start."),
         "mispestanas": MessageLookupByLibrary.simpleMessage("My sites"),
         "modocorazon": MessageLookupByLibrary.simpleMessage(
             "Your connection to the Shunnck network has been established. This way you stay anonymous on the web and help others stay anonymous."),
@@ -60,8 +68,14 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("This website is not secure!"),
         "nohaydatos":
             MessageLookupByLibrary.simpleMessage("No data available!"),
+        "nohaynadaatras":
+            MessageLookupByLibrary.simpleMessage("There is nothing behind."),
+        "nohaynadaquerecargar":
+            MessageLookupByLibrary.simpleMessage("There is nothing to reload."),
         "nohaypestanas":
             MessageLookupByLibrary.simpleMessage("No tabs saved yet!"),
+        "nopuedescompartir":
+            MessageLookupByLibrary.simpleMessage("You cannot share this."),
         "politicas": MessageLookupByLibrary.simpleMessage(
             "By using Shunnck, you accept our policies."),
         "recargar": MessageLookupByLibrary.simpleMessage("Reload"),

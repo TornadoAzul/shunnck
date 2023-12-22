@@ -10,7 +10,7 @@
     "confirmacioneliminar": "Are you sure you want to delete this moment?",
     "confirmar": "Yes",
     "cancelar": "No",
-    "guardado": "Saved",
+    "guardado": "Saved.",
     "agregarnombre": "Add a title to the tab",
     "guardar": "Save site",
     "cancelarpelao": "Cancel",
@@ -36,5 +36,12 @@
     "holowide" : "shunnck",
     "modocorazon" : "Your connection to the Shunnck network has been established. This way you stay anonymous on the web and help others stay anonymous.",
     "sanjuannoalavista": "San Juan is not in sight!",
-    "sinconexion": "There are internet connection problems that prevent you from connecting to the Shunnck network."
+    "sinconexion": "There are internet connection problems that prevent you from connecting to the Shunnck network.",
+    "mantenerlupa1": "Press and hold ",
+    "mantenerlupa2": " to return to the start.",
+    "bloqueoiniciado": "Block initiated",
+    "bloqueocr": "CodRecup's mass tracking block collects threats locally and sends them to the Shunnck network to stop them as soon as possible.",
+    "nohaynadaatras": "There is nothing behind.",
+    "nohaynadaquerecargar": "There is nothing to reload.",
+    "nopuedescompartir": "You cannot share this."
 }

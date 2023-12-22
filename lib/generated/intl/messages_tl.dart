@@ -30,6 +30,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "agregarnombre":
             MessageLookupByLibrary.simpleMessage("Magdagdag ng pamagat sa tab"),
         "atras": MessageLookupByLibrary.simpleMessage("Likod"),
+        "bloqueocr": MessageLookupByLibrary.simpleMessage(
+            "Ang masibong pag-block ng mga tagapagtaguyod ng CodRecup ay nagkakalap ng mga banta sa lokal at ipinadala ang mga ito sa Shunnck network upang mapigilan ang mga ito nang mas maaga."),
+        "bloqueoiniciado":
+            MessageLookupByLibrary.simpleMessage("Simula ng block"),
         "buscar": MessageLookupByLibrary.simpleMessage("Maghanap dito."),
         "buscareninternet": MessageLookupByLibrary.simpleMessage(
             "Maligayang pagdating sa Internet!"),
@@ -44,12 +48,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "copiado": MessageLookupByLibrary.simpleMessage(
             "Kamusta, ang link na ito ay nakopya."),
         "estasseguro": MessageLookupByLibrary.simpleMessage("Sigurado ka ba."),
-        "guardado": MessageLookupByLibrary.simpleMessage("Naitala"),
+        "guardado": MessageLookupByLibrary.simpleMessage("Naitala."),
         "guardaguardado": MessageLookupByLibrary.simpleMessage(
             "Ang guarda ay na-save sa Holowide!"),
         "guardar": MessageLookupByLibrary.simpleMessage("I-save ang site"),
         "holowide": MessageLookupByLibrary.simpleMessage("shunnck"),
         "lotengo": MessageLookupByLibrary.simpleMessage("Nakuha ko na!"),
+        "mantenerlupa1":
+            MessageLookupByLibrary.simpleMessage("Pindutin nang matagal ang "),
+        "mantenerlupa2":
+            MessageLookupByLibrary.simpleMessage(" para bumalik sa simulaan."),
         "mispestanas": MessageLookupByLibrary.simpleMessage("Aking mga tab"),
         "modocorazon": MessageLookupByLibrary.simpleMessage(
             "Ang iyong koneksyon sa Shunnck network ay naitaguyod. Sa ganitong paraan, mananatiling anonymous ka sa web at tutulong sa iba na manatili ring anonymous."),
@@ -62,8 +70,14 @@ class MessageLookup extends MessageLookupByLibrary {
             "Ang website na ito ay hindi ligtas!"),
         "nohaydatos":
             MessageLookupByLibrary.simpleMessage("Walang available na data!"),
+        "nohaynadaatras":
+            MessageLookupByLibrary.simpleMessage("Wala kang mababalikan."),
+        "nohaynadaquerecargar":
+            MessageLookupByLibrary.simpleMessage("Wala kang pwedeng i-reload."),
         "nohaypestanas":
             MessageLookupByLibrary.simpleMessage("Walang naitalang mga tab!"),
+        "nopuedescompartir": MessageLookupByLibrary.simpleMessage(
+            "Hindi mo ito maaaring ibahagi."),
         "politicas": MessageLookupByLibrary.simpleMessage(
             "Sa paggamit ng Shunnck, tinatanggap mo ang aming mga patakaran."),
         "recargar": MessageLookupByLibrary.simpleMessage("I-reload"),

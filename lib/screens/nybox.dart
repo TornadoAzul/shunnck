@@ -115,12 +115,27 @@ class _NyboxViewState extends State<NyboxView> {
           actions: [
             IconButton(
               icon: Icon(
-                Ionicons.shield_checkmark,
+                Ionicons.cube_outline,
                 color: Theme.of(context).brightness == Brightness.dark
                     ? Theme.of(context).colorScheme.onBackground
                     : Theme.of(context).primaryColor,
               ),
-              onPressed: () {},
+              onPressed: () {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+                    content: Text(
+                      "Aún no hay una configuración disponible aún.",
+                      style: TextStyle(
+                        fontFamily: "PON",
+                        fontSize: 20,
+                        color: Theme.of(context).primaryColor,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                );
+              },
             ),
           ],
         ),
@@ -135,7 +150,7 @@ class _NyboxViewState extends State<NyboxView> {
               decoration: InputDecoration(
                 filled: true,
                 fillColor: Theme.of(context).scaffoldBackgroundColor,
-                hintText: S.current.buscar,
+                hintText: "Shunnear algo",
                 hintStyle: TextStyle(
                   color: Theme.of(context).colorScheme.secondary,
                   fontSize: 50,

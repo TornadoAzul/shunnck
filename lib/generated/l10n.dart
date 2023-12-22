@@ -160,10 +160,10 @@ class S {
     );
   }
 
-  /// `Saved`
+  /// `Saved.`
   String get guardado {
     return Intl.message(
-      'Saved',
+      'Saved.',
       name: 'guardado',
       desc: '',
       args: [],
@@ -425,6 +425,76 @@ class S {
     return Intl.message(
       'There are internet connection problems that prevent you from connecting to the Shunnck network.',
       name: 'sinconexion',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Press and hold `
+  String get mantenerlupa1 {
+    return Intl.message(
+      'Press and hold ',
+      name: 'mantenerlupa1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ` to return to the start.`
+  String get mantenerlupa2 {
+    return Intl.message(
+      ' to return to the start.',
+      name: 'mantenerlupa2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Block initiated`
+  String get bloqueoiniciado {
+    return Intl.message(
+      'Block initiated',
+      name: 'bloqueoiniciado',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `CodRecup's mass tracking block collects threats locally and sends them to the Shunnck network to stop them as soon as possible.`
+  String get bloqueocr {
+    return Intl.message(
+      'CodRecup\'s mass tracking block collects threats locally and sends them to the Shunnck network to stop them as soon as possible.',
+      name: 'bloqueocr',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `There is nothing behind.`
+  String get nohaynadaatras {
+    return Intl.message(
+      'There is nothing behind.',
+      name: 'nohaynadaatras',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `There is nothing to reload.`
+  String get nohaynadaquerecargar {
+    return Intl.message(
+      'There is nothing to reload.',
+      name: 'nohaynadaquerecargar',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You cannot share this.`
+  String get nopuedescompartir {
+    return Intl.message(
+      'You cannot share this.',
+      name: 'nopuedescompartir',
       desc: '',
       args: [],
     );

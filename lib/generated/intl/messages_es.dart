@@ -29,6 +29,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "agregarnombre": MessageLookupByLibrary.simpleMessage(
             "Agregar un título a la pestaña"),
         "atras": MessageLookupByLibrary.simpleMessage("Atrás"),
+        "bloqueocr": MessageLookupByLibrary.simpleMessage(
+            "El bloqueo masivo de rastreadores de CodRecup recopila de manera local las amenazas y las envía a la red de Shunnck para poder frenarlas en cuanto antes."),
+        "bloqueoiniciado":
+            MessageLookupByLibrary.simpleMessage("Bloqueo iniciado"),
         "buscar": MessageLookupByLibrary.simpleMessage("Busca aquí"),
         "buscareninternet":
             MessageLookupByLibrary.simpleMessage("¡Bienvenido a Internet!"),
@@ -44,12 +48,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "copiado": MessageLookupByLibrary.simpleMessage(
             "Hola, este enlace está copiado."),
         "estasseguro": MessageLookupByLibrary.simpleMessage("Estás seguro."),
-        "guardado": MessageLookupByLibrary.simpleMessage("Guardado"),
+        "guardado": MessageLookupByLibrary.simpleMessage("Guardado."),
         "guardaguardado": MessageLookupByLibrary.simpleMessage(
             "¡La guarda se ha guardado en el Holowide!"),
         "guardar": MessageLookupByLibrary.simpleMessage("Guardar sitio"),
         "holowide": MessageLookupByLibrary.simpleMessage("shunnck"),
         "lotengo": MessageLookupByLibrary.simpleMessage("¡Lo tengo!"),
+        "mantenerlupa1":
+            MessageLookupByLibrary.simpleMessage("Mantenér oprimido "),
+        "mantenerlupa2":
+            MessageLookupByLibrary.simpleMessage(" para volver al inicio."),
         "mispestanas": MessageLookupByLibrary.simpleMessage("Mis sitios"),
         "modocorazon": MessageLookupByLibrary.simpleMessage(
             "Tu conexión a la red Shunnck ha sido establecida. De esta manera, permaneces anónimo en la web y ayudas a otros a mantenerse anónimos."),
@@ -63,8 +71,14 @@ class MessageLookup extends MessageLookupByLibrary {
             "¡Este sitio web no es seguro!"),
         "nohaydatos":
             MessageLookupByLibrary.simpleMessage("¡No hay datos disponibles!"),
+        "nohaynadaatras":
+            MessageLookupByLibrary.simpleMessage("No hay nada atrás."),
+        "nohaynadaquerecargar":
+            MessageLookupByLibrary.simpleMessage("No hay nada que recargar"),
         "nohaypestanas": MessageLookupByLibrary.simpleMessage(
             "¡Aún no hay pestañas guardadas!"),
+        "nopuedescompartir":
+            MessageLookupByLibrary.simpleMessage("No puedes compartir esto."),
         "politicas": MessageLookupByLibrary.simpleMessage(
             "Al usar Shunnck, aceptas nuestras políticas."),
         "recargar": MessageLookupByLibrary.simpleMessage("Recargar"),

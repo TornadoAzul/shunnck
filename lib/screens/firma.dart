@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:shunnck/screens/genesis.dart';
-import 'package:shunnck/screens/home.dart';
 
 class FirmaView extends StatefulWidget {
   const FirmaView({super.key});

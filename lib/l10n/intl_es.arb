@@ -10,7 +10,7 @@
     "confirmacioneliminar": "¿Estás seguro de que quieres eliminar este momento?",
     "confirmar": "Sí",
     "cancelar": "No",
-    "guardado": "Guardado",
+    "guardado": "Guardado.",
     "agregarnombre": "Agregar un título a la pestaña",
     "guardar": "Guardar sitio",
     "cancelarpelao": "Cancelar",
@@ -36,5 +36,12 @@
     "holowide" : "shunnck",
     "modocorazon" : "Tu conexión a la red Shunnck ha sido establecida. De esta manera, permaneces anónimo en la web y ayudas a otros a mantenerse anónimos.",
     "sanjuannoalavista" : "¡San Juan no está a la vista!",
-    "sinconexion" : "Hay problemas de conexión a internet que impiden conectarse con la red de Shunnck."
+    "sinconexion" : "Hay problemas de conexión a internet que impiden conectarse con la red de Shunnck.",
+    "mantenerlupa1" : "Mantenér oprimido ",
+    "mantenerlupa2" : " para volver al inicio.",
+    "bloqueoiniciado" : "Bloqueo iniciado",
+    "bloqueocr" : "El bloqueo masivo de rastreadores de CodRecup recopila de manera local las amenazas y las envía a la red de Shunnck para poder frenarlas en cuanto antes.",
+    "nohaynadaatras" : "No hay nada atrás.",
+    "nohaynadaquerecargar" : "No hay nada que recargar",
+    "nopuedescompartir" : "No puedes compartir esto."
 }

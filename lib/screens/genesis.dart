@@ -7,6 +7,7 @@ import 'package:shunnck/generated/l10n.dart';
 import 'package:shunnck/screens/home.dart';
 import 'package:shunnck/screens/lernas.dart';
 import 'package:shunnck/screens/nybox.dart';
+import 'package:shunnck/screens/qrcode.dart';
 import 'package:shunnck/views/imagen.dart';
 
 class GenesisView extends StatefulWidget {
@@ -121,6 +122,27 @@ class _GenesisViewState extends State<GenesisView> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
                 IconButton(
+                  icon: Icon(Ionicons.arrow_back_outline,
+                      color: Theme.of(context).colorScheme.onTertiary),
+                  onPressed: () {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        backgroundColor:
+                            Theme.of(context).scaffoldBackgroundColor,
+                        content: Text(
+                          S.current.nohaynadaatras,
+                          style: TextStyle(
+                            fontFamily: "PON",
+                            fontSize: 20,
+                            color: Theme.of(context).primaryColor,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    );
+                  },
+                ),
+                IconButton(
                   icon: Icon(
                     Ionicons.menu_outline,
                     color: Theme.of(context).colorScheme.secondary,
@@ -139,7 +161,7 @@ class _GenesisViewState extends State<GenesisView> {
                   },
                   child: IconButton(
                     icon: Icon(
-                      Ionicons.search_outline,
+                      Ionicons.sparkles_outline,
                       color: Theme.of(context).colorScheme.secondary,
                     ),
                     onPressed: () {
@@ -152,11 +174,48 @@ class _GenesisViewState extends State<GenesisView> {
                   ),
                 ),
                 IconButton(
+                  icon: Icon(Ionicons.reload_outline,
+                      color: Theme.of(context).colorScheme.onTertiary),
+                  onPressed: () {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        backgroundColor:
+                            Theme.of(context).scaffoldBackgroundColor,
+                        content: Text(
+                          S.current.nohaynadaquerecargar,
+                          style: TextStyle(
+                            fontFamily: "PON",
+                            fontSize: 20,
+                            color: Theme.of(context).primaryColor,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    );
+                  },
+                ),
+                IconButton(
                   icon: Icon(
                     Ionicons.arrow_undo_outline,
                     color: Theme.of(context).colorScheme.onTertiary,
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        backgroundColor:
+                            Theme.of(context).scaffoldBackgroundColor,
+                        content: Text(
+                          S.current.nopuedescompartir,
+                          style: TextStyle(
+                            fontFamily: "PON",
+                            fontSize: 20,
+                            color: Theme.of(context).primaryColor,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    );
+                  },
                 ),
               ],
             ),
@@ -376,20 +435,6 @@ class _GenesisViewState extends State<GenesisView> {
                   ListTile(
                     onTap: () {
                       Navigator.pop(context);
-                    },
-                    leading: Icon(
-                      Ionicons.cube_outline,
-                      color: Theme.of(context).colorScheme.onBackground,
-                      size: 26,
-                    ),
-                    title: const Text(
-                      "Oranĝo",
-                      style: TextStyle(fontSize: 22),
-                    ),
-                  ),
-                  ListTile(
-                    onTap: () {
-                      Navigator.pop(context);
                       _codRecup(context);
                     },
                     leading: Icon(
@@ -404,10 +449,13 @@ class _GenesisViewState extends State<GenesisView> {
                   ),
                   ListTile(
                     onTap: () {
-                      Navigator.pop(context);
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(builder: (context) => QRCodeScreen()),
+                      );
                     },
                     leading: Icon(
-                      Ionicons.scan_outline,
+                      Ionicons.qr_code_outline,
                       color: Theme.of(context).colorScheme.onBackground,
                       size: 26,
                     ),
@@ -482,39 +530,22 @@ class _GenesisViewState extends State<GenesisView> {
                     },
                     leading: Icon(
                       Ionicons.power_outline,
-                      color: Theme.of(context).colorScheme.onBackground,
+                      color: Theme.of(context).colorScheme.secondary,
                       size: 26,
                     ),
-                    title: const Text(
-                      "Iniciar bloqueo",
-                      style: TextStyle(fontSize: 22),
+                    title: Text(
+                      S.current.bloqueoiniciado,
+                      style: TextStyle(
+                          fontSize: 22,
+                          color: Theme.of(context).colorScheme.secondary),
                     ),
                   ),
                   ListTile(
                     onTap: () {
                       Navigator.pop(context);
                     },
-                    leading: Icon(
-                      Ionicons.nuclear_outline,
-                      color: Theme.of(context).colorScheme.onBackground,
-                      size: 26,
-                    ),
-                    title: const Text(
-                      "Sitios a bloquear",
-                      style: TextStyle(fontSize: 22),
-                    ),
-                  ),
-                  ListTile(
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                    leading: Icon(
-                      Ionicons.wifi_outline,
-                      color: Theme.of(context).colorScheme.onBackground,
-                      size: 26,
-                    ),
-                    title: const Text(
-                      "Red Shunnck activada",
+                    title: Text(
+                      S.current.bloqueocr,
                       style: TextStyle(fontSize: 22),
                     ),
                   ),

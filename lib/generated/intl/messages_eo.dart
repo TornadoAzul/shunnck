@@ -30,6 +30,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "agregarnombre": MessageLookupByLibrary.simpleMessage(
             "Aldoni titolon al la langeto"),
         "atras": MessageLookupByLibrary.simpleMessage("Reen"),
+        "bloqueocr": MessageLookupByLibrary.simpleMessage(
+            "La masiva blokado de sekviloj de CodRecup kolektas minacojn lokale kaj sendas ilin al la Shunnck-reto por malhelpi ilin kiel eble plej baldaŭ."),
+        "bloqueoiniciado":
+            MessageLookupByLibrary.simpleMessage("Ekaperanto ekestiĝis"),
         "buscar": MessageLookupByLibrary.simpleMessage("Serĉu ĉi tie."),
         "buscareninternet":
             MessageLookupByLibrary.simpleMessage("Bonvenon al la Interreto!"),
@@ -50,6 +54,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "guardar": MessageLookupByLibrary.simpleMessage("Konservi retejon"),
         "holowide": MessageLookupByLibrary.simpleMessage("shunnck"),
         "lotengo": MessageLookupByLibrary.simpleMessage("Mi komprenis!"),
+        "mantenerlupa1":
+            MessageLookupByLibrary.simpleMessage("Premu kaj tenu "),
+        "mantenerlupa2":
+            MessageLookupByLibrary.simpleMessage(" por reveni al la komenco."),
         "mispestanas": MessageLookupByLibrary.simpleMessage("Miaj lanĉetoj"),
         "modocorazon": MessageLookupByLibrary.simpleMessage(
             "Via konekto al la Shunnck-reto estas starigita. Tiel vi restas anonima sur la reto kaj helpas aliajn resti anonimaj."),
@@ -62,8 +70,14 @@ class MessageLookup extends MessageLookupByLibrary {
             "Ĉi tiu retejo estas nesekura!"),
         "nohaydatos":
             MessageLookupByLibrary.simpleMessage("Neniu havebla datumo!"),
+        "nohaynadaatras":
+            MessageLookupByLibrary.simpleMessage("Ne estas io malantaŭe."),
+        "nohaynadaquerecargar":
+            MessageLookupByLibrary.simpleMessage("Ne estas io por reŝarĝi."),
         "nohaypestanas": MessageLookupByLibrary.simpleMessage(
             "Ankoraŭ ne estas konservitaj lanĉetoj!"),
+        "nopuedescompartir": MessageLookupByLibrary.simpleMessage(
+            "Vi ne povas kunhavigi ĉi tion."),
         "politicas": MessageLookupByLibrary.simpleMessage(
             "Uzante Shunnck, vi akceptas niajn politikojn."),
         "recargar": MessageLookupByLibrary.simpleMessage("Reŝarĝi"),

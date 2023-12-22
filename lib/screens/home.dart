@@ -39,12 +39,47 @@ class _HomeScreenState extends State<HomeScreen>
   @override
   void initState() {
     super.initState();
+
     _searchController = TextEditingController(text: widget.url);
     if (widget.url != null) {
       _currentUrl = widget.url!;
     }
     _loadWebLinks();
     _searchFieldFocus = FocusNode();
+
+    // Muestra el SnackBar al iniciar la pantalla
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+          content: RichText(
+            text: TextSpan(
+              style: TextStyle(
+                fontFamily: "PON",
+                fontSize: 20,
+                color: Theme.of(context).primaryColor,
+                fontWeight: FontWeight.bold,
+              ),
+              children: [
+                TextSpan(
+                  text: S.current.mantenerlupa1,
+                ),
+                WidgetSpan(
+                  child: Icon(
+                    Ionicons.search_outline, // Cambia a tu propio icono de lupa
+                    color: Theme.of(context).primaryColor,
+                    size: 20,
+                  ),
+                ),
+                TextSpan(
+                  text: S.current.mantenerlupa2,
+                ),
+              ],
+            ),
+          ),
+        ),
+      );
+    });
   }
 
   Future<void> _checkIfSecure(String url) async {
@@ -588,14 +623,6 @@ class _HomeScreenState extends State<HomeScreen>
     }
   }
 
-  void _showNoConnectionPage() {
-    final String noConnectionHtml = 'assets/no_connection.html';
-
-    _webViewController.loadFile(
-      assetFilePath: noConnectionHtml,
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     Widget nybox;
@@ -741,14 +768,33 @@ class _HomeScreenState extends State<HomeScreen>
             color: Theme.of(context).colorScheme.onBackground,
           ),
           actions: [
-            IconButton(
-              icon: Icon(
-                Ionicons.bookmarks_outline,
-                color: Theme.of(context).colorScheme.secondary,
-              ),
-              onPressed: () {
-                _mostrarVentanas(context);
+            GestureDetector(
+              onLongPress: () {
+                _saveWebLinks();
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+                    content: Text(
+                      S.current.guardado,
+                      style: TextStyle(
+                        fontFamily: "PON",
+                        fontSize: 20,
+                        color: Theme.of(context).primaryColor,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                );
               },
+              child: IconButton(
+                icon: Icon(
+                  Ionicons.bookmarks_outline,
+                  color: Theme.of(context).colorScheme.secondary,
+                ),
+                onPressed: () {
+                  _mostrarVentanas(context);
+                },
+              ),
             ),
           ],
         ),
@@ -762,6 +808,13 @@ class _HomeScreenState extends State<HomeScreen>
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
+                  IconButton(
+                    icon: Icon(Ionicons.arrow_back_outline,
+                        color: Theme.of(context).colorScheme.secondary),
+                    onPressed: () {
+                      _goBack();
+                    },
+                  ),
                   IconButton(
                     icon: Icon(Ionicons.menu_outline,
                         color: Theme.of(context).colorScheme.secondary),
@@ -786,6 +839,13 @@ class _HomeScreenState extends State<HomeScreen>
                         _openSearchBar();
                       },
                     ),
+                  ),
+                  IconButton(
+                    icon: Icon(Ionicons.reload_outline,
+                        color: Theme.of(context).colorScheme.secondary),
+                    onPressed: () {
+                      _refresh();
+                    },
                   ),
                   GestureDetector(
                     onLongPress: () {
